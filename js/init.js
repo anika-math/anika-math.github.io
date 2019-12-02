@@ -6,8 +6,8 @@
   }); // end of document ready
 })(jQuery); // end of jQuery name space
 
-function logIn(){
-	window.location.href="question1.html"
+function logIn(name){
+	window.location.href="menu.html?name="+name.value;
 }
 
 function questionOne(elem) {
@@ -36,7 +36,7 @@ function questionOne(elem) {
 		res.appendChild(title);
 	}
 	setTimeout(function(){
-		window.location.href="question2.html"
+		window.location.href="menu.html"
 	},5000);
 }
 
@@ -58,6 +58,27 @@ function questionTwo(elem) {
 		res.appendChild(title);
 	}
 	setTimeout(function(){
-		window.location.href="index.html"
+		window.location.href="question3.html"
+	},5000);
+}
+
+function questionThree(elem){
+	if(elem.value=="100-96-92-88-84-80-76"){
+		var res = document.getElementById("response");
+		var title = document.createElement("H1");
+		var text = document.createTextNode("Correct");
+		text.style="color:green";
+		title.appendChild(text);
+		res.appendChild(title);
+	} else{
+		var res = document.getElementById("response");
+		var title = document.createElement("H1");
+		var text = document.createTextNode("Incorrect");
+		text.style="color: red";
+		title.appendChild(text);
+		res.appendChild(title);
+	}
+	setTimeout(function(){
+		window.location.href="question2.html"
 	},5000);
 }
