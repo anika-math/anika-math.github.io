@@ -21,7 +21,11 @@
 	  <div class="row center">
 		<h2>Demonstrate tearing a piece of paper </h2>
 	  </div>
+	 <div class="row center">
+        <a onclick="next()" id="download-button" class="btn-large waves-effect waves-light orange">Next</a>
+	  </div>
 	  <br><br><br><br><br><br><br><br><br><br>
+
 	  
 	  <div id="response" class="row center">
 	  
@@ -58,9 +62,9 @@
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   <script>
-	window.onload = setTimeout(function(){
-		window.location.href="menu.html"
-	},7000);
+	function next(){
+		window.location.href="menu.html";
+	}
   </script>
   
   </body>
