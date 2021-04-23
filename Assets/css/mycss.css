@@ -1,0 +1,36 @@
+.panel
+{
+    max-width: 30%;
+    position: absolute;
+    left: 30%;
+    top: 15%;
+    z-index: 1; 
+}
+
+.panel-background 
+{
+    background-color: white;
+}
+
+.panel-quit-btn 
+{
+    float: right;
+    background-color: red;
+}
+
+.anime-img
+{
+    height: 80px;
+    opacity: 0.6;
+}
+
+.noel-img
+{
+    height: 200px;
+}
+
+.anime-not-first 
+{
+    padding-left: 20%;
+}
+

@@ -1,101 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Starter Template - Materialize</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro Windows</title>
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-	<style type="text/css">
+    <link rel="stylesheet" href="./Assets/css/style.css" />
+    <link rel="stylesheet" href="./dist/acacia.min.css" />
+    <link rel="stylesheet" href="./Assets/css/mycss.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main id="desktop">
+      <div>
 
-	</style>
-</head>
-<body>
-  <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <br><br>
-      <h1 class="header center orange-text">Amnesia App</h1>
-      <div class="row center">
-        <h5 class="header col s12 light">Please log in below</h5>
+
+        <div class="desktop-icons" id="readme">
+          <a><img src="./Assets/img/Notepad document.ico" />
+            <p>Readme.txt</p></a
+          >
+        </div>
+        <div onclick="appearModal('anime-panel')" class="desktop-icons">
+          <img src="./Assets/img/Folder.ico" />
+          <p>Animes</p>
+        </div>
+        <div onclick="appearModal('men-panel')" class="desktop-icons">
+          <img src="./Assets/img/Folder.ico" />
+          <p>Reasons to hate men</p>
+        </div>
+        <div onclick="appearModal('noel-panel')" class="desktop-icons">
+          <img src="./Assets/img/Folder.ico" />
+          <p>The one man I do not hate</p>
+        </div>
+
+        <div class="desktop-icons">
+          <img src="./Assets/img/Empty Recycle Bin.ico" />
+          <p>Recycle Bin</p>
+        </div>
+        <div class="desktop-icons">
+          <a href="https://www.google.com/"><img src="./Assets/img/Search on Earth.ico" width="35px" />
+          <p>The Internet</p></a>
+        </div>
+        <div class="desktop-icons">
+          <img src="./Assets/img/Briefcase.ico" />
+          <p>My Briefcase</p>
+        </div>
+        <div class="desktop-icons">
+          <a 
+          onclick="centeredPopup(this.href,'myWindow','900','600','yes');return false"
+          href="https://diegoeme.github.io/MSPaint/"><img src="./Assets/img/Paint.ico" />
+          <p>Paint</p></a>
+        </div>
       </div>
-	  <div class="row center">
-		    <input id="user" type="text"  placeholder="Enter username">
-			<input type="password"  placeholder="Enter password">
-	  </div>
-      <div class="row center">
-        <a onclick="logIn(user)" id="download-button" class="btn-large waves-effect waves-light orange">Log In</a>
-      </div>
-      <br><br>
-	  
+
+<!-- FOLDER PANELS START -->
+
+<div id="anime-panel"  style="display: none;" class="aca-panel panel">
+    <div class="header">Animes
+    <span class="panel-quit-btn">[X]</span>
     </div>
-  </div>
+    <div class="body panel-background">
+    	<h1>Animes</h1>
+    <br/><br/> 
+    <img class="anime-img" src="./Assets/img/mha.jpg" />
+    <img class="anime-img anime-not-first" src="./Assets/img/jjk.png" />
+    <img class="anime-img anime-not-first" src="./Assets/img/kny.jpg" />
+    
+    <br/><br/>
+    <img class="anime-img" src="./Assets/img/aot.jpg" />
+    <img class="anime-img anime-not-first" src="./Assets/img/jjba.jpg" />
+    <img class="anime-img anime-not-first" src="./Assets/img/gintama.jpg" />
 
+	<div class="footer">
+            <button class="aca-button suggestion">OK</button>
+            <button class="aca-button">Cancel</button>
+            <button class="aca-button">Browse...</button>
+       	</div>
+    </div>
+</div>
 
-  <div class="container">
-    <div class="section">
+<div id="men-panel"  style="display: none;" class="aca-panel panel">
+    <div class="header">Men
+    <span class="panel-quit-btn">[X]</span>
+    </div>
+    <div class="body panel-background">
+    
+    <h1 style="font-size: 20pt !important">1. Everything</h1>   
 
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Speeds up development</h5>
-			<p class="light">
-				
-			</p>
+	<div class="footer">
+            <button class="aca-button suggestion">OK</button>
+            <button class="aca-button">Cancel</button>
+            <button class="aca-button">Browse...</button>
+       	</div>
+    </div>
+</div>
+
+<div id="noel-panel"  style="display: none;" class="aca-panel panel">
+    <div class="header">Men
+    <span class="panel-quit-btn">[X]</span>
+    </div>
+    <div class="body panel-background">
+    
+    <p style="text-align: center">
+    <img class="noel-img" src="./Assets/img/noel_miller.png" />
+
+    </p>
+
+    <div class="footer">
+            <button class="aca-button suggestion">OK</button>
+            <button class="aca-button">Cancel</button>
+            <button class="aca-button">Browse...</button>
+       	</div>
+    </div>
+</div>
+
+<!--    FOLDER PANELS END   -->
+
+      <div><img id="logo" src="./Assets/img/logo2.jpg" alt="logo" /></div>
+
+      <footer id="footer">
+        <div id="dropdown-content" style="display: none">
+          <div id="a">
+            <img src="./Assets/img/Captura.PNG" />
+          </div>
+          <div id="b">
+            <a href="">
+              <img
+                class="icons-menu"
+                src="./Assets/img/Program Folder (16x16px & 32x32px).ico" />
+              Programs <i class="fas fa-caret-right"></i
+            ></a>
+          </div>
+          <div id="c">
+            <a href=""
+              ><img
+                class="icons-menu"
+                src="./Assets/img/Documents Folder.ico" />
+              Documents <i class="fas fa-caret-right"></i
+            ></a>
+          </div>
+          <div id="d">
+            <a href=""
+              ><img class="icons-menu" src="./Assets/img/Settings.ico" />
+              Settings <i class="fas fa-caret-right"></i
+            ></a>
+          </div>
+          <div id="e">
+            <a href=""
+              ><img
+                class="icons-menu"
+                src="./Assets/img/Search in sheet (16x16px & 32x32px) (blue).ico" />
+              Find <i class="fas fa-caret-right"></i
+            ></a>
+          </div>
+          <div id="f">
+            <a href=""
+              ><img class="icons-menu" src="./Assets/img/Help book.ico" />
+              Help</a
+            >
+          </div>
+          <div id="g">
+            <a href=""
+              ><img
+                class="icons-menu"
+                src="./Assets/img/Program wait.ico"
+                alt=""
+              />
+              Run</a
+            >
+          </div>
+          <div id="h">
+            <a href="https://diegoeme.github.io/Calculadora/index.html"
+            onclick="centeredPopup(this.href,'myWindow','500','500','yes');return false"
+
+              ><img
+                class="icons-menu"
+                src="./Assets/img/Calculator.ico"
+                alt=""
+              />
+              Calculator</a
+            >
+          </div>
+          <div id="i">
+            <a href=""
+              ><img
+                class="icons-menu"
+                src="./Assets/img/Turn Off Computer (display only).ico"
+              />
+              Shut Down...</a
+            >
           </div>
         </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
-
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Easy to work with</h5>
-
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <br><br>
-  </div>
-
-  <footer class="page-footer orange">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">BME 100 Group 6</h5>
-          <p class="grey-text text-lighten-4">
-			Creds to: Anna, Anika
-		  </p>
-
-
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="orange-text text-lighten-3"
-	  href="http://materializecss.com">Students of BME 100</a>
-      </div>
-    </div>
-  </footer>
-
-
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
+        <button id="start" onclick="myFunction()">
+          <img id="icono" src="./Assets/img/icon.png" width="20px" />
+          <p id="inicio">Start</p>
+        </button>
+      </footer>
+    </main>
+    <script src="./Assets/js/app.js"></script>
+    <script src="./Assets/js/myjs.js"></script>
 
   </body>
 </html>
