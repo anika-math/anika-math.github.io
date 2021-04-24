@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Retro Windows</title>
+    <title>Neechan's webpage</title>
 
     <link rel="stylesheet" href="./Assets/css/style.css" />
     <link rel="stylesheet" href="./dist/acacia.min.css" />
@@ -21,48 +21,80 @@
 
 
         <div class="desktop-icons" id="readme">
-          <a><img src="./Assets/img/Notepad document.ico" />
+          <a><img onclick="appearModal('readme-panel')" src="./Assets/img/Notepad document.ico" />
             <p>Readme.txt</p></a
           >
         </div>
-        <div onclick="appearModal('anime-panel')" class="desktop-icons">
-          <img src="./Assets/img/Folder.ico" />
+        <div class="desktop-icons">
+          <img onclick="appearModal('anime-panel')"  src="./Assets/img/Folder.ico" />
           <p>Animes</p>
         </div>
-        <div onclick="appearModal('men-panel')" class="desktop-icons">
-          <img src="./Assets/img/Folder.ico" />
+        <div class="desktop-icons">
+          <img onclick="appearModal('men-panel')"  src="./Assets/img/Folder.ico" />
           <p>Reasons to hate men</p>
         </div>
-        <div onclick="appearModal('noel-panel')" class="desktop-icons">
-          <img src="./Assets/img/Folder.ico" />
+        <div class="desktop-icons">
+          <img onclick="appearModal('noel-panel')"  src="./Assets/img/Folder.ico" />
           <p>The one man I do not hate</p>
         </div>
+
+        <div class="desktop-icons">
+          <img onclick="appearModal('fancam-panel')"  src="./Assets/img/Folder.ico" />
+          <p>Fancams</p>
+        </div>
+
+        <div class="desktop-icons">
+          <img onclick="appearModal('hotdog-panel')"  src="./Assets/img/Folder.ico" />
+          <p>Did you know</p>
+        </div>
+
+        <div class="desktop-icons">
+          <img onclick="appearModal('starter-panel')"  src="./Assets/img/Folder.ico" />
+          <p>Starter Pack</p>
+        </div>
+        <div class="desktop-icons">
+          <img onclick="appearModal('anime-kaguya-panel')"  src="./Assets/img/Folder.ico" />
+          <p>Best Anime</p>
+        </div>
+
 
         <div class="desktop-icons">
           <img src="./Assets/img/Empty Recycle Bin.ico" />
           <p>Recycle Bin</p>
         </div>
         <div class="desktop-icons">
-          <a href="https://www.google.com/"><img src="./Assets/img/Search on Earth.ico" width="35px" />
+          <img src="./Assets/img/Search on Earth.ico" width=35px />
           <p>The Internet</p></a>
-        </div>
-        <div class="desktop-icons">
-          <img src="./Assets/img/Briefcase.ico" />
-          <p>My Briefcase</p>
-        </div>
-        <div class="desktop-icons">
-          <a 
-          onclick="centeredPopup(this.href,'myWindow','900','600','yes');return false"
-          href="https://diegoeme.github.io/MSPaint/"><img src="./Assets/img/Paint.ico" />
-          <p>Paint</p></a>
         </div>
       </div>
 
 <!-- FOLDER PANELS START -->
+<div id="readme-panel"  style="display: none;" class="aca-panel panel">
+    <div class="header">Readme.txt
+    <span onclick="disappearModal()" class="panel-quit-btn">[X]</span>
+    </div>
+    <div class="body panel-background">
+    
+    <h1 style="font-size: 12pt !important">
+    Hallo, the development of this website is supported and brought to you by the LL Influencer Management team (that's not entirely true because I never consulted with them before making this statement). 
+<br/><br/>
+You can navigate around by clicking on the folder icons (they pretty much the only things that work, since this website was rushed and made in a hurry). The website was initially supposed to reflect your interests but I don't even know what it is anymore. Enjoy!
+    </h1>   
+    <br/><br/><br/>
+    <h1 style="font-size: 8pt !important">
+    P.S. happy birthday XD
+    </h1>
+
+	<div class="footer">
+            <button class="aca-button suggestion">OK</button>
+            <button onclick="disappearModal()" class="aca-button">Cancel</button>
+       	</div>
+    </div>
+</div>
 
 <div id="anime-panel"  style="display: none;" class="aca-panel panel">
     <div class="header">Animes
-    <span class="panel-quit-btn">[X]</span>
+    <span onclick="disappearModal()" class="panel-quit-btn">[X]</span>
     </div>
     <div class="body panel-background">
     	<h1>Animes</h1>
@@ -74,19 +106,22 @@
     <br/><br/>
     <img class="anime-img" src="./Assets/img/aot.jpg" />
     <img class="anime-img anime-not-first" src="./Assets/img/jjba.jpg" />
+    <img class="anime-img anime-not-first" src="./Assets/img/op.jpg" />
+
+    <br/><br/>
+    <img class="anime-img" src="./Assets/img/kaichou_wa_maid_sama.jpg" />
     <img class="anime-img anime-not-first" src="./Assets/img/gintama.jpg" />
 
 	<div class="footer">
             <button class="aca-button suggestion">OK</button>
-            <button class="aca-button">Cancel</button>
-            <button class="aca-button">Browse...</button>
+            <button onclick="disappearModal()" class="aca-button">Cancel</button>
        	</div>
     </div>
 </div>
 
 <div id="men-panel"  style="display: none;" class="aca-panel panel">
     <div class="header">Men
-    <span class="panel-quit-btn">[X]</span>
+    <span onclick="disappearModal()" class="panel-quit-btn">[X]</span>
     </div>
     <div class="body panel-background">
     
@@ -94,15 +129,14 @@
 
 	<div class="footer">
             <button class="aca-button suggestion">OK</button>
-            <button class="aca-button">Cancel</button>
-            <button class="aca-button">Browse...</button>
+            <button onclick="disappearModal()" class="aca-button">Cancel</button>
        	</div>
     </div>
 </div>
 
 <div id="noel-panel"  style="display: none;" class="aca-panel panel">
     <div class="header">Men
-    <span class="panel-quit-btn">[X]</span>
+    <span onclick="disappearModal()" class="panel-quit-btn">[X]</span>
     </div>
     <div class="body panel-background">
     
@@ -113,11 +147,90 @@
 
     <div class="footer">
             <button class="aca-button suggestion">OK</button>
-            <button class="aca-button">Cancel</button>
-            <button class="aca-button">Browse...</button>
+            <button onclick="disappearModal()" class="aca-button">Cancel</button>
        	</div>
     </div>
 </div>
+
+<div id="fancam-panel"  style="display: none;" class="aca-panel panel">
+    <div class="header">Fancams
+    <span onclick="disappearModal()" class="panel-quit-btn">[X]</span>
+    </div>
+    <div class="body panel-background">
+    	<h1>Fancams</h1>
+    <br/><br/> 
+    <img class="fancam-gif" src="./Assets/img/fancam_1.gif" height=200 />
+    <br/><br/><br/>
+    <img class="fancam-gif" src="./Assets/img/fancam_2.gif" height=200 />
+    
+	<div class="footer">
+            <button class="aca-button suggestion">OK</button>
+            <button onclick="disappearModal()" class="aca-button">Cancel</button>
+       	</div>
+    </div>
+</div>
+
+<div id="hotdog-panel"  style="display: none;" class="aca-panel panel">
+    <div class="header">Did you know
+    <span onclick="disappearModal()" class="panel-quit-btn">[X]</span>
+    </div>
+    <div class="body panel-background">
+    	<h1>Kind of random I know but I think you can figure this one out</h1>
+    <br/><br/> 
+    <img class="fancam-gif" src="./Assets/img/hotdog-bicycle.gif" height=200 />
+       
+	<div class="footer">
+            <button class="aca-button suggestion">OK</button>
+            <button onclick="disappearModal()" class="aca-button">Cancel</button>
+       	</div>
+    </div>
+</div>
+
+<div id="starter-panel"  style="display: none;" class="aca-panel panel">
+    <div class="header">Starter Pack
+    <span onclick="disappearModal()" class="panel-quit-btn">[X]</span>
+    </div>
+    <div class="body panel-background">
+    	<h1>Starter Pack</h1>
+    <br/><br/> 
+    <img class="anime-img" src="./Assets/img/bts.jpg" />
+    <img class="anime-img anime-not-first" src="./Assets/img/bambu.png" />
+    <img class="anime-img anime-not-first" src="./Assets/img/twitter.png" />
+    
+    <br/><br/>
+    <img class="anime-img" src="./Assets/img/leechee_nail_polish.png" />
+    <img class="anime-img anime-not-first" src="./Assets/img/pleading_emoji.png" />
+    <h1 style="font-size:10pt">Favorite musical group</h1>
+    <img class="anime-img anime-not-first" src="./Assets/img/bp.jpg" />
+
+	<div class="footer">
+            <button class="aca-button suggestion">OK</button>
+            <button onclick="disappearModal()" class="aca-button">Cancel</button>
+       	</div>
+    </div>
+</div>
+
+<div id="anime-kaguya-panel"  style="display: none;" class="aca-panel panel">
+    <div class="header">Animes
+    <span onclick="disappearModal()" class="panel-quit-btn">[X]</span>
+    </div>
+    <div class="body panel-background">
+    	<h1>Animes</h1>
+    <br/><br/> 
+    <p style="text-align: center">
+    <img class="noel-img" src="./Assets/img/kaguya_sama.jpg" />
+
+    </p>
+   
+    <h1 style="font-size: 10pt">Aii please just watch the show, thanks</h1>
+
+	<div class="footer">
+            <button class="aca-button suggestion">OK</button>
+            <button onclick="disappearModal()" class="aca-button">Cancel</button>
+       	</div>
+    </div>
+</div>
+
 
 <!--    FOLDER PANELS END   -->
 
